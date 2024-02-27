@@ -21,18 +21,18 @@ jobs:
       with:
         dotnet-version: 6.0.x
         
-    - name: Restore dependencies (ProjectName)
+    - name: Restore dependencies (MyEvents)
       run: dotnet restore
-      working-directory: ProjectName
+      working-directory: MyEvents
       
-    - name: Build (ProjectName)
+    - name: Build (MyEvents)
       run: dotnet build --no-restore
-      working-directory: ProjectName
+      working-directory: MyEvents
 
-    - name: Restore dependencies (ProjectName.Tests)
+    - name: Restore dependencies (MyEvents.Tests)
       run: dotnet restore
-      working-directory: ProjectName.Tests
+      working-directory: MyEvents.Tests
       
-    - name: Test (ProjectName.Tests)
+    - name: Test (MyEvents.Tests)
       run: dotnet test
-      working-directory: ProjectName.Tests
+      working-directory: MyEvents.Tests
